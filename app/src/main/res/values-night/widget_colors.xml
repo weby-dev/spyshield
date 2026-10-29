@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen widget palette (DESIGN.md 7.7), dark. -->
+<resources>
+    <color name="widget_bg">#16171B</color>
+    <color name="widget_text_primary">#F3F3F1</color>
+    <color name="widget_text_secondary">#A3A6AE</color>
+    <color name="widget_icon_bg">#1D2550</color>
+</resources>

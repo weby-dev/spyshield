@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home-screen widget palette (DESIGN.md 7.7), light. Night overrides live in values-night/widget_colors.xml. -->
+<resources>
+    <color name="widget_bg">#FFFFFF</color>
+    <color name="widget_text_primary">#121316</color>
+    <color name="widget_text_secondary">#5C5F66</color>
+    <color name="widget_icon_bg">#EEF0FF</color>
+    <dimen name="widget_radius">24dp</dimen>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SpyShield launcher foreground (DESIGN.md 7.8): white shield (4.1 path, 46 x 53, centred on 54,54,
+  inside the 66dp safe zone) with a lens punched out (evenOdd) so the brand-blue background shows
+  through, plus a small white pupil highlight. Because the lens is a true cutout, the same drawable
+  also reads correctly as the themed (monochrome) icon.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillType="evenOdd"
+        android:pathData="M54,27.5 L73.19,34.35 Q76.84,35.72 76.84,39.38 V53.09 C76.84,66.34 67.25,75.93 54,80.5 C40.75,75.93 31.16,66.34 31.16,53.09 V39.38 Q31.16,35.72 34.81,34.35 Z M46,52 A8,8 0 1,0 62,52 A8,8 0 1,0 46,52 Z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M48,49 A3,3 0 1,0 54,49 A3,3 0 1,0 48,49 Z" />
+</vector>
