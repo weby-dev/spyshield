@@ -4,20 +4,20 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android 8.0+](https://img.shields.io/badge/Android-8.0%2B-3DDC84?logo=android&logoColor=white)](#install-on-your-phone-step-by-step)
-[![Latest release](https://img.shields.io/github/v/release/OWNER_PLACEHOLDER/spyshield?label=latest%20release)](https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/OWNER_PLACEHOLDER/spyshield/total?label=downloads)](https://github.com/OWNER_PLACEHOLDER/spyshield/releases)
+[![Latest release](https://img.shields.io/github/v/release/weby-dev/spyshield?label=latest%20release)](https://github.com/weby-dev/spyshield/releases/latest)
+[![Downloads](https://img.shields.io/github/downloads/weby-dev/spyshield/total?label=downloads)](https://github.com/weby-dev/spyshield/releases)
 
 <p align="center">
-  <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk">
+  <a href="https://github.com/weby-dev/spyshield/releases/latest/download/SpyShield.apk">
     <img src="https://img.shields.io/badge/Download%20the%20APK-SpyShield.apk-2ea44f?style=for-the-badge&logo=android&logoColor=white" alt="Download the SpyShield APK" height="48">
   </a>
 </p>
 
 <p align="center">
-  <b><a href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk">Download SpyShield.apk (latest version)</a></b>
+  <b><a href="https://github.com/weby-dev/spyshield/releases/latest/download/SpyShield.apk">Download SpyShield.apk (latest version)</a></b>
   &nbsp;·&nbsp; <a href="docs/INSTALL.md">Simple install guide</a>
-  &nbsp;·&nbsp; <a href="https://OWNER_PLACEHOLDER.github.io/spyshield/">Website</a>
-  &nbsp;·&nbsp; <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest">Release notes</a>
+  &nbsp;·&nbsp; <a href="https://weby-dev.github.io/spyshield/">Website</a>
+  &nbsp;·&nbsp; <a href="https://github.com/weby-dev/spyshield/releases/latest">Release notes</a>
 </p>
 
 <p align="center">
@@ -96,7 +96,7 @@ It's free, has no ads and no account, and everything stays on your phone.
 SpyShield isn't on the Play Store yet, so you install it from this page. It takes about two minutes. You don't need a computer. A longer guide with more detail is in **[docs/INSTALL.md](docs/INSTALL.md)**.
 
 1. **On your Android phone**, open this page in your browser (Chrome, Samsung Internet, etc.).
-2. Tap **[Download SpyShield.apk](https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk)**. If your browser asks "Download anyway?" or warns that the file might be harmful, tap **Download** (this warning appears for every app downloaded outside the Play Store).
+2. Tap **[Download SpyShield.apk](https://github.com/weby-dev/spyshield/releases/latest/download/SpyShield.apk)**. If your browser asks "Download anyway?" or warns that the file might be harmful, tap **Download** (this warning appears for every app downloaded outside the Play Store).
 3. When the download finishes, tap **Open** in the notification, or open your **Files** / **My Files** app and go to **Downloads**, then tap **SpyShield.apk**.
 4. Android may say *"For your security, your phone is not allowed to install unknown apps from this source."* Tap **Settings**, turn on **Allow from this source** (also called **Install unknown apps**) for your browser or Files app, then press the back button.
 5. Tap **Install**.
@@ -126,7 +126,7 @@ Menu names differ slightly between phone models and Android versions. If you can
 
 ## How to update
 
-Download the newest **[SpyShield.apk](https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk)** (the link always points to the latest version) and install it over the old one, exactly like the first time. **Don't uninstall first:** installing on top keeps your settings, block list and history. You can see what changed on the [releases page](https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest). Watch this repository (Watch → Custom → Releases) to be told about new versions.
+Download the newest **[SpyShield.apk](https://github.com/weby-dev/spyshield/releases/latest/download/SpyShield.apk)** (the link always points to the latest version) and install it over the old one, exactly like the first time. **Don't uninstall first:** installing on top keeps your settings, block list and history. You can see what changed on the [releases page](https://github.com/weby-dev/spyshield/releases/latest). Watch this repository (Watch → Custom → Releases) to be told about new versions.
 
 ## FAQ
 
@@ -189,7 +189,7 @@ Install SpyShield, finish setup, then open the **Apps** tab and look at apps wit
 - **No root, no magic.** Without root, no app can silently switch off another app's permissions or kill it. "Block" means an instant alarm plus one tap to the right Android screen.
 - **Background culprit is a best guess.** Android hides which app holds the camera or mic from normal apps. SpyShield names the app confidently when it's the one on screen; for background use it shows the most likely apps unless it is confident.
 - **Battery savers can stop it.** On some phones (OPPO, Realme, Xiaomi, Vivo, Samsung) you must allow background activity, or protection stops without warning. See [First-time setup](#first-time-setup).
-- **Android 8.0 or newer only, and no iPhone.** Tested on an OPPO Reno8 5G running Android 14; other phones may behave slightly differently. Please [report problems](https://github.com/OWNER_PLACEHOLDER/spyshield/issues/new?template=bug_report.md).
+- **Android 8.0 or newer only, and no iPhone.** Tested on an OPPO Reno8 5G running Android 14; other phones may behave slightly differently. Please [report problems](https://github.com/weby-dev/spyshield/issues/new?template=bug_report.md).
 - **It's a monitor, not an antivirus.** It focuses on camera and microphone access and doesn't scan files for malware.
 
 ## Privacy
@@ -216,7 +216,7 @@ SpyShield is written in **Kotlin** with **Jetpack Compose** (Material 3). `minSd
 **Command line**
 
 ```bash
-git clone https://github.com/OWNER_PLACEHOLDER/spyshield.git
+git clone https://github.com/weby-dev/spyshield.git
 cd spyshield
 ./gradlew assembleDebug        # Windows: gradlew.bat assembleDebug
 # APK: app/build/outputs/apk/debug/app-debug.apk
@@ -263,7 +263,7 @@ Unit tests cover risk levels, the privacy score, duration formatting and event s
 
 ## Contributing
 
-Bug reports, phone-specific fixes and translations are very welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md). When reporting a bug, use the [bug report template](https://github.com/OWNER_PLACEHOLDER/spyshield/issues/new?template=bug_report.md) and include your phone model and Android version; detection behaviour varies a lot between phone makers.
+Bug reports, phone-specific fixes and translations are very welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md). When reporting a bug, use the [bug report template](https://github.com/weby-dev/spyshield/issues/new?template=bug_report.md) and include your phone model and Android version; detection behaviour varies a lot between phone makers.
 
 If SpyShield helped you, a star on GitHub helps other people find it.
 

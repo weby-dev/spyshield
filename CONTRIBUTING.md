@@ -4,7 +4,7 @@ Thanks for helping make SpyShield better! Contributions of all sizes are welcome
 
 ## Ways to help
 
-- **Report bugs**, especially phone-specific ones. Camera and microphone behaviour varies a lot between phone makers, so reports from different models are really valuable. Use the [bug report template](https://github.com/OWNER_PLACEHOLDER/spyshield/issues/new?template=bug_report.md) and include your phone model and Android version.
+- **Report bugs**, especially phone-specific ones. Camera and microphone behaviour varies a lot between phone makers, so reports from different models are really valuable. Use the [bug report template](https://github.com/weby-dev/spyshield/issues/new?template=bug_report.md) and include your phone model and Android version.
 - **Report false alarms** (an alert when nothing was spying) and say what you were doing at the time, e.g. face unlock, a call or voice typing.
 - **Improve the docs**, such as battery-setting paths for phones not yet listed in [docs/INSTALL.md](docs/INSTALL.md).
 - **Send code**: bug fixes, detection improvements, accessibility and translations.

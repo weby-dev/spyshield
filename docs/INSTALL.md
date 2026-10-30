@@ -14,7 +14,7 @@ A simple, step-by-step guide. No computer and no technical knowledge needed. It 
 
 1. Open this link in your phone's browser (Chrome, Samsung Internet, or any other):
 
-   **[Download SpyShield.apk](https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk)**
+   **[Download SpyShield.apk](https://github.com/weby-dev/spyshield/releases/latest/download/SpyShield.apk)**
 
 2. Your browser may show a warning such as *"File might be harmful"* or *"Download anyway?"*.
    Tap **Download** / **Download anyway**.
@@ -110,7 +110,7 @@ First tap **Allow** when SpyShield asks to stop optimising its battery use. Then
 
 ## Updating to a new version
 
-1. Download the latest file from the same link: **[SpyShield.apk](https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk)**
+1. Download the latest file from the same link: **[SpyShield.apk](https://github.com/weby-dev/spyshield/releases/latest/download/SpyShield.apk)**
 2. Open it and tap **Update** (or **Install**).
 
 **Don't uninstall the old version first.** Installing on top keeps your settings, block list and history.
@@ -127,6 +127,6 @@ First tap **Allow** when SpyShield asks to stop optimising its battery use. Then
 | It always says **Unknown app** | Usage Access is probably off. Turn it on (Step 5.2). |
 | Alerts during face unlock or calls | Tap **Not a spy** on the alert, or mark the app as **Trusted**. |
 
-Still stuck? [Open a bug report](https://github.com/OWNER_PLACEHOLDER/spyshield/issues/new?template=bug_report.md) and tell us your phone model and Android version.
+Still stuck? [Open a bug report](https://github.com/weby-dev/spyshield/issues/new?template=bug_report.md) and tell us your phone model and Android version.
 
 [← Back to the SpyShield README](../README.md)

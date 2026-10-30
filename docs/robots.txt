@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://OWNER_PLACEHOLDER.github.io/spyshield/sitemap.xml
+Sitemap: https://weby-dev.github.io/spyshield/sitemap.xml
