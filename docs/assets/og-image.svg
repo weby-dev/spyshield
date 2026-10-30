@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0B0C0F"/>
+  <rect x="80" y="80" width="150" height="150" rx="36" fill="#3D5AFE"/>
+  <g transform="translate(80 80) scale(1.3889)">
+    <path fill="#fff" fill-rule="evenodd" d="M54 27.5L73.19 34.35Q76.84 35.72 76.84 39.38V53.09C76.84 66.34 67.25 75.93 54 80.5C40.75 75.93 31.16 66.34 31.16 53.09V39.38Q31.16 35.72 34.81 34.35ZM46 52A8 8 0 1 0 62 52A8 8 0 1 0 46 52Z"/>
+    <circle cx="51" cy="49" r="3" fill="#fff"/>
+  </g>
+  <text x="260" y="180" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="64" font-weight="800" fill="#F2F2EE">SpyShield</text>
+  <text x="80" y="340" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" fill="#F2F2EE">Which app is secretly using</text>
+  <text x="80" y="415" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="58" font-weight="800" fill="#F2F2EE">your camera or microphone?</text>
+  <circle cx="96" cy="512" r="10" fill="#3DD68C"/>
+  <text x="120" y="522" font-family="Plus Jakarta Sans, Segoe UI, Arial, sans-serif" font-size="30" fill="#A6A8AF">Free, open-source Android app · No internet permission · No account</text>
+</svg>

@@ -3,3 +3,8 @@ build/
 local.properties
 .idea/
 *.iml
+
+# Release signing secrets
+keystore.properties
+*.jks
+*.keystore

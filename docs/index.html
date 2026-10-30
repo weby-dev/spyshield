@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpyShield: See Which App Uses Your Camera &amp; Mic (Android)</title>
+<meta name="description" content="Free, open-source Android app that alerts you when your camera or microphone turns on, names the app using it and flags hidden spying. No ads, no account.">
+<link rel="canonical" href="https://OWNER_PLACEHOLDER.github.io/spyshield/">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#F2F2EE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0B0C0F" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'%3E%3Crect width='108' height='108' rx='26' fill='%233D5AFE'/%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M54 27.5L73.19 34.35Q76.84 35.72 76.84 39.38V53.09C76.84 66.34 67.25 75.93 54 80.5C40.75 75.93 31.16 66.34 31.16 53.09V39.38Q31.16 35.72 34.81 34.35ZM46 52A8 8 0 1 0 62 52A8 8 0 1 0 46 52Z'/%3E%3Ccircle cx='51' cy='49' r='3' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="alternate icon" href="assets/favicon.svg" type="image/svg+xml">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpyShield">
+<meta property="og:title" content="SpyShield: See which app is using your camera or mic">
+<meta property="og:description" content="Free, open-source Android app that alerts you when your camera or microphone turns on and names the app using it. Everything stays on your phone.">
+<meta property="og:url" content="https://OWNER_PLACEHOLDER.github.io/spyshield/">
+<meta property="og:image" content="https://OWNER_PLACEHOLDER.github.io/spyshield/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpyShield shield logo with the text: Which app is secretly using your camera or microphone?">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpyShield: See which app is using your camera or mic">
+<meta name="twitter:description" content="Free, open-source Android app that alerts you when your camera or microphone turns on and names the app using it.">
+<meta name="twitter:image" content="https://OWNER_PLACEHOLDER.github.io/spyshield/assets/og-image.png">
+<meta name="twitter:image:alt" content="SpyShield shield logo with the text: Which app is secretly using your camera or microphone?">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SpyShield",
+  "alternateName": "SpyShield: Camera & Mic Guard",
+  "description": "Free, open-source Android app that alerts you when your camera or microphone turns on, names the app using it, flags hidden background use and scores every app's spy risk. Everything stays on your device.",
+  "operatingSystem": "Android",
+  "softwareRequirements": "Android 8.0 or newer",
+  "applicationCategory": "SecurityApplication",
+  "softwareVersion": "1.0",
+  "license": "https://opensource.org/licenses/MIT",
+  "url": "https://OWNER_PLACEHOLDER.github.io/spyshield/",
+  "downloadUrl": "https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk",
+  "installUrl": "https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk",
+  "sameAs": "https://github.com/OWNER_PLACEHOLDER/spyshield",
+  "image": "https://OWNER_PLACEHOLDER.github.io/spyshield/assets/og-image.png",
+  "screenshot": [
+    "https://OWNER_PLACEHOLDER.github.io/spyshield/assets/screenshot-dashboard.png",
+    "https://OWNER_PLACEHOLDER.github.io/spyshield/assets/screenshot-settings.png"
+  ],
+  "isAccessibleForFree": true,
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is SpyShield really free?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. SpyShield is free and open source under the MIT license. There are no ads, no in-app purchases and no account to create." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SpyShield send my data anywhere?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. SpyShield does not even ask for the internet permission, so it cannot send anything off your phone by itself. Your activity history, block list and settings stay in the app's private storage on your device. A privacy report only leaves your phone if you choose to share it." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can SpyShield tell me exactly which app is using my camera or microphone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When an app is on screen, yes. For apps working in the background, Android hides the exact app from normal apps, so SpyShield shows its best guess as \"Possible: ...\" unless it can identify the app with confidence." }
+    },
+    {
+      "@type": "Question",
+      "name": "Can SpyShield stop a spying app automatically?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Partly. With the optional Auto-block setting, when SpyShield confidently identifies a background app using your camera or mic, it adds that app to your block list and sounds an alarm with a Stop it now button. Android does not let one app close another, so you tap Force stop yourself. From there you can also revoke its camera or microphone access or uninstall it in one tap." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it need root?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. SpyShield works on normal, unrooted phones. Because it does not use root, it cannot silently switch off another app's permissions; instead it takes you straight to the right settings page in one tap." }
+    },
+    {
+      "@type": "Question",
+      "name": "Which phones does it work on? Is there an iPhone version?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SpyShield works on Android 8.0 and newer. It has been tested on an OPPO Reno8 5G running Android 14. iPhone is not supported." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my phone warn me when I install the APK?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Android shows a warning for any app installed from outside the Play Store. That is normal for downloaded APK files. SpyShield's full source code is public on GitHub, so anyone can check what it does." }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does SpyShield ask for Usage Access?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Usage Access lets SpyShield see which app was on screen at the moment your camera or microphone switched on. That is how it tells normal use (like a video call you started) apart from hidden use. This information never leaves your phone." }
+    },
+    {
+      "@type": "Question",
+      "name": "SpyShield stops working after a while. What can I do?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Some phones, especially Xiaomi, OPPO, Vivo and Samsung, close background apps to save battery. Open your phone's settings for SpyShield and set its battery usage to Unrestricted." }
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --bg:#F2F2EE; --surface:#FFFFFF; --surface2:#E8E8E2; --text:#121317; --muted:#5A5C63; --line:rgba(18,19,23,.10);
+  --brand:#3D5AFE; --brand-ink:#FFFFFF; --brand-soft:rgba(61,90,254,.10);
+  --safe:#1E9E62; --safe-ink:#146C43; --safe-soft:rgba(61,214,140,.16); --danger:#E03E3E; --danger-soft:rgba(255,93,93,.14);
+  --frame:#1B1C21; --shadow:0 1px 2px rgba(18,19,23,.06),0 12px 32px rgba(18,19,23,.08);
+  --r-lg:24px; --r-md:18px; --r-sm:12px;
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#0B0C0F; --surface:#16171B; --surface2:#1F2026; --text:#F2F2EE; --muted:#A6A8AF; --line:rgba(242,242,238,.08);
+    --brand:#3D5AFE; --brand-soft:rgba(61,90,254,.18);
+    --safe:#3DD68C; --safe-ink:#3DD68C; --safe-soft:rgba(61,214,140,.14); --danger:#FF5D5D; --danger-soft:rgba(255,93,93,.14);
+    --frame:#2A2B31; --shadow:0 12px 40px rgba(0,0,0,.45);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 "Plus Jakarta Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--brand)}
+@media (prefers-color-scheme: dark){a{color:#8C9EFF}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 16px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--brand);color:#fff;padding:8px 14px;border-radius:10px;z-index:10}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:8px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:20px;color:var(--text);text-decoration:none;letter-spacing:-.01em}
+.logo svg{width:34px;height:34px;flex:none}
+.top nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px;margin-left:18px}
+.top nav a:hover{color:var(--text)}
+.top nav .hide-sm{display:none}
+@media (min-width:640px){.top nav .hide-sm{display:inline}}
+
+/* hero */
+.hero{padding:28px 0 40px;display:grid;gap:36px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;background:var(--safe-soft);color:var(--safe-ink);font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--safe);display:block}
+h1{font-size:clamp(32px,8.4vw,56px);line-height:1.08;letter-spacing:-.025em;font-weight:800;margin:16px 0 14px}
+.lede{font-size:clamp(17px,2.4vw,20px);color:var(--muted);margin:0 0 26px;max-width:36em}
+.cta{display:flex;flex-direction:column;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:56px;padding:14px 26px;border-radius:16px;font-weight:700;font-size:18px;text-decoration:none;transition:transform .12s ease,background .12s ease}
+.btn:active{transform:scale(.98)}
+.btn svg{width:22px;height:22px;flex:none}
+.btn-primary{background:var(--brand);color:var(--brand-ink)}
+.btn-primary:hover{background:#3150F0}
+.btn-ghost{background:var(--surface);color:var(--text);box-shadow:var(--shadow)}
+@media (prefers-color-scheme: dark){.btn-ghost{color:var(--text)}}
+.fine{font-size:14px;color:var(--muted);margin:14px 0 0}
+@media (min-width:560px){.cta{flex-direction:row;flex-wrap:wrap}}
+@media (min-width:900px){.hero{grid-template-columns:1.15fr .85fr;padding:48px 0 64px}}
+
+/* phone frames */
+.phone{background:var(--frame);border-radius:38px;padding:10px;box-shadow:var(--shadow);width:100%;max-width:300px;margin:0 auto}
+.phone img{border-radius:29px;width:100%;aspect-ratio:1080/2400;object-fit:cover;background:#0B0C0F}
+.shots{display:grid;gap:28px;grid-template-columns:1fr}
+.shots figure{margin:0}
+.shots figcaption{text-align:center;color:var(--muted);font-size:15px;margin-top:14px}
+@media (min-width:640px){.shots{grid-template-columns:1fr 1fr}}
+
+/* sections */
+section{padding:44px 0}
+.eyebrow{color:var(--brand);font-weight:700;font-size:15px;margin:0 0 6px}
+@media (prefers-color-scheme: dark){.eyebrow{color:#8C9EFF}}
+h2{font-size:clamp(26px,5.6vw,38px);line-height:1.15;letter-spacing:-.02em;font-weight:800;margin:0 0 12px}
+.sub{color:var(--muted);margin:0 0 28px;max-width:40em}
+h3{font-size:18px;line-height:1.3;margin:0 0 6px;font-weight:700}
+
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:600px){.grid{grid-template-columns:1fr 1fr}}
+@media (min-width:960px){.grid{grid-template-columns:1fr 1fr 1fr}}
+.card{background:var(--surface);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow)}
+.card p{margin:0;color:var(--muted);font-size:16px}
+.ico{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:var(--brand-soft);color:var(--brand);margin-bottom:14px}
+@media (prefers-color-scheme: dark){.ico{color:#8C9EFF}}
+.ico svg{width:24px;height:24px}
+.ico.danger{background:var(--danger-soft);color:var(--danger)}
+.ico.safe{background:var(--safe-soft);color:var(--safe-ink)}
+
+.more{margin-top:14px;background:var(--surface);border-radius:var(--r-lg);padding:20px 22px;box-shadow:var(--shadow)}
+.more ul{margin:0;padding:0;list-style:none;display:grid;gap:8px 24px;grid-template-columns:1fr}
+@media (min-width:600px){.more ul{grid-template-columns:1fr 1fr}}
+.more li{position:relative;padding-left:26px;color:var(--text);font-size:16px}
+.more li::before{content:"";position:absolute;left:2px;top:.5em;width:12px;height:12px;border-radius:50%;background:var(--safe-soft);box-shadow:inset 0 0 0 3px var(--safe)}
+
+/* steps */
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:1fr;padding:0;margin:0;list-style:none}
+@media (min-width:860px){.steps{grid-template-columns:1fr 1fr 1fr}}
+.steps li{counter-increment:s;background:var(--surface);border-radius:var(--r-lg);padding:22px;box-shadow:var(--shadow)}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--brand);color:#fff;font-weight:800;font-size:18px;margin-bottom:14px}
+.steps p{margin:0 0 8px;color:var(--muted);font-size:16px}
+.steps p:last-child{margin-bottom:0}
+.steps strong{color:var(--text)}
+.center{text-align:center;margin-top:26px}
+
+/* honest + privacy */
+.split{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:860px){.split{grid-template-columns:1fr 1fr}}
+.panel{border-radius:var(--r-lg);padding:26px}
+.panel.privacy{background:var(--brand);color:#fff}
+.panel.privacy p,.panel.privacy li{color:rgba(255,255,255,.88)}
+.panel.honest{background:var(--surface);box-shadow:var(--shadow)}
+.panel.honest li{color:var(--muted)}
+.panel h2{font-size:clamp(24px,4.6vw,30px)}
+.panel ul{margin:12px 0 0;padding-left:20px}
+.panel li{margin:6px 0;font-size:16px}
+.panel li strong{color:inherit}
+.panel.honest li strong{color:var(--text)}
+
+/* faq */
+.faq{display:grid;gap:10px}
+details{background:var(--surface);border-radius:var(--r-md);box-shadow:var(--shadow);padding:0 20px}
+summary{cursor:pointer;list-style:none;font-weight:700;font-size:17px;padding:18px 32px 18px 0;position:relative}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";position:absolute;right:4px;top:50%;width:10px;height:10px;border-right:2.5px solid var(--muted);border-bottom:2.5px solid var(--muted);transform:translateY(-70%) rotate(45deg);transition:transform .15s ease}
+details[open] summary::after{transform:translateY(-30%) rotate(-135deg)}
+details p{margin:0 0 18px;color:var(--muted);font-size:16px}
+
+/* final cta + footer */
+.final{background:var(--surface);border-radius:28px;padding:34px 22px;text-align:center;box-shadow:var(--shadow)}
+.final .cta{justify-content:center;align-items:stretch}
+@media (min-width:560px){.final .cta{align-items:center}}
+footer{padding:36px 0 48px;color:var(--muted);font-size:15px}
+footer .row{display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;justify-content:space-between}
+footer nav{display:flex;flex-wrap:wrap;gap:8px 18px}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--text)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="wrap top">
+  <a class="logo" href="./" aria-label="SpyShield home">
+    <svg viewBox="0 0 108 108" aria-hidden="true"><rect width="108" height="108" rx="26" fill="#3D5AFE"/><path fill="#fff" fill-rule="evenodd" d="M54 27.5L73.19 34.35Q76.84 35.72 76.84 39.38V53.09C76.84 66.34 67.25 75.93 54 80.5C40.75 75.93 31.16 66.34 31.16 53.09V39.38Q31.16 35.72 34.81 34.35ZM46 52A8 8 0 1 0 62 52A8 8 0 1 0 46 52Z"/><circle cx="51" cy="49" r="3" fill="#fff"/></svg>
+    SpyShield
+  </a>
+  <nav aria-label="Main">
+    <a class="hide-sm" href="#features">Features</a>
+    <a class="hide-sm" href="#install">How to install</a>
+    <a href="#faq">FAQ</a>
+    <a href="https://github.com/OWNER_PLACEHOLDER/spyshield">GitHub</a>
+  </nav>
+</header>
+
+<main id="main">
+  <div class="wrap hero">
+    <div>
+      <span class="badge"><i></i>Free Android app · Open source</span>
+      <h1>Find out which app is secretly using your camera or microphone</h1>
+      <p class="lede">SpyShield alerts you the moment your camera or mic switches on, names the app behind it, and warns you when something uses them in the background, with the screen off or while your phone is locked.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download free APK
+        </a>
+        <a class="btn btn-ghost" href="https://github.com/OWNER_PLACEHOLDER/spyshield">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+          View source on GitHub
+        </a>
+      </div>
+      <p class="fine">Android 8.0+ · Free · Open source · No ads · No account</p>
+    </div>
+    <div class="phone">
+      <img src="assets/screenshot-dashboard.png" width="1080" height="2400" alt="SpyShield dashboard showing the protection status, the real-time protection switch, and the camera and microphone both idle" fetchpriority="high">
+    </div>
+  </div>
+
+  <section id="features" aria-labelledby="features-h">
+    <div class="wrap">
+      <p class="eyebrow">What it does</p>
+      <h2 id="features-h">A quiet guard for your camera and mic</h2>
+      <p class="sub">SpyShield runs in the background and stays calm until something touches your camera or microphone. Then it tells you clearly what happened and what you can do about it.</p>
+      <div class="grid">
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h2l1.5-2h7L17 6h2a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><circle cx="12" cy="13" r="3.5"/></svg></div>
+          <h3>Live camera &amp; mic alerts</h3>
+          <p>Get notified as soon as your camera or microphone turns on, with the name of the app using it.</p>
+        </article>
+        <article class="card">
+          <div class="ico danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/><path d="M4 4l16 16"/></svg></div>
+          <h3>Catches hidden use</h3>
+          <p>Flags camera or mic use while the screen is off, the phone is locked, you are on the home screen, or a background recording was silenced by Android.</p>
+        </article>
+        <article class="card">
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+          <h3>App scanner with risk score</h3>
+          <p>Every app that can reach your camera or mic gets a 0 to 100 spy-risk score, with the reasons spelled out. Pre-installed apps with access are flagged too.</p>
+        </article>
+        <article class="card">
+          <div class="ico danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m5.6 5.6 12.8 12.8"/></svg></div>
+          <h3>Block list &amp; one-tap fixes</h3>
+          <p>Block an app and get an instant alarm if it touches your camera or mic, with one-tap Revoke access, Force stop and Uninstall.</p>
+        </article>
+        <article class="card">
+          <div class="ico danger"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></div>
+          <h3>Optional Auto-block</h3>
+          <p>When SpyShield confidently identifies a background spy, it adds it to your block list and sounds an alarm with a Stop it now button. You tap Force stop to close it.</p>
+        </article>
+        <article class="card">
+          <div class="ico safe"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></div>
+          <h3>Stays on your phone</h3>
+          <p>No internet permission, no account, no ads, no analytics. Your history never leaves your device.</p>
+        </article>
+      </div>
+      <div class="more">
+        <h3>Also included</h3>
+        <ul>
+          <li>Trusted apps, to quiet alerts for apps you approve</li>
+          <li>Privacy dot: a small on-screen dot while the camera or mic is on</li>
+          <li>Quick Settings tile to check and toggle protection</li>
+          <li>Home-screen widget</li>
+          <li>Alerts when a newly installed app can use your camera or mic</li>
+          <li>A card when an existing app gains camera or mic access</li>
+          <li>Activity timeline of every camera and mic session</li>
+          <li>Shareable privacy report</li>
+          <li>Light and dark theme</li>
+          <li>Fewer false alarms: calls, voice assistant, flashlight and face unlock are recognised</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="screenshots" aria-labelledby="shots-h">
+    <div class="wrap">
+      <p class="eyebrow">Screenshots</p>
+      <h2 id="shots-h">Clear at a glance</h2>
+      <p class="sub">Real screenshots from an OPPO Reno8 5G running Android 14.</p>
+      <div class="shots">
+        <figure>
+          <div class="phone"><img src="assets/screenshot-dashboard.png" width="1080" height="2400" loading="lazy" alt="SpyShield home screen with the shield status, the real-time protection switch, and camera and microphone shown as idle"></div>
+          <figcaption>Your protection status, camera and mic at a glance</figcaption>
+        </figure>
+        <figure>
+          <div class="phone"><img src="assets/screenshot-settings.png" width="1080" height="2400" loading="lazy" alt="SpyShield overview statistics and protection settings, including the Auto-block and Privacy dot switches"></div>
+          <figcaption>Overview stats and protection settings, including Auto-block and Privacy dot</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="install" aria-labelledby="install-h">
+    <div class="wrap">
+      <p class="eyebrow">Beginner friendly</p>
+      <h2 id="install-h">How to install in 3 steps</h2>
+      <p class="sub">SpyShield is installed from an APK file rather than the Play Store. It takes about a minute.</p>
+      <ol class="steps">
+        <li>
+          <h3>Download the app</h3>
+          <p>On your Android phone, tap <strong>Download free APK</strong>. A file called <strong>SpyShield.apk</strong> is saved to your Downloads.</p>
+          <p>If your browser asks whether to keep the file, tap <strong>Download anyway</strong>.</p>
+        </li>
+        <li>
+          <h3>Open it and allow the install</h3>
+          <p>Tap the downloaded file. Android may say your browser is not allowed to install apps. Tap <strong>Settings</strong>, turn on <strong>Allow from this source</strong>, then go back and tap <strong>Install</strong>.</p>
+          <p>If <strong>Google Play Protect</strong> shows a warning, tap <strong>More details</strong>, then <strong>Install anyway</strong>. Warnings like this are normal for any app that does not come from the Play Store.</p>
+        </li>
+        <li>
+          <h3>Turn on protection</h3>
+          <p>Open SpyShield and follow the short setup. Switch on <strong>Real-time protection</strong>, allow <strong>Usage Access</strong> and <strong>notifications</strong>.</p>
+          <p>On Xiaomi, OPPO, Vivo or Samsung phones, set SpyShield's battery usage to <strong>Unrestricted</strong> so it keeps running.</p>
+        </li>
+      </ol>
+      <div class="center">
+        <a class="btn btn-primary" href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+          Download free APK
+        </a>
+        <p class="fine">All versions and release notes: <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest">Releases page</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" aria-labelledby="privacy-h">
+    <div class="wrap split">
+      <div class="panel privacy">
+        <h2 id="privacy-h">Our privacy promise</h2>
+        <p>An app that guards your privacy should not collect any of it. SpyShield doesn't.</p>
+        <ul>
+          <li><strong>No internet permission.</strong> SpyShield cannot send anything off your phone by itself. A privacy report only leaves if you choose to share it.</li>
+          <li><strong>No account</strong>, no sign-up, no email address.</li>
+          <li><strong>No ads, analytics or trackers.</strong></li>
+          <li>It only checks <em>whether</em> the camera or mic is on. It never opens them, records or listens.</li>
+          <li>Your history stays in the app's private storage. Uninstall it and everything is gone.</li>
+          <li>The full source code is public, so anyone can check.</li>
+        </ul>
+      </div>
+      <div class="panel honest">
+        <h2>Honest limits</h2>
+        <p style="color:var(--muted);margin:0">We would rather tell you up front.</p>
+        <ul>
+          <li><strong>No root.</strong> SpyShield cannot silently switch off another app's permissions. It takes you to the right settings page in one tap.</li>
+          <li><strong>Background apps are a best guess.</strong> Android hides the exact app from normal apps, so SpyShield shows "Possible: ..." unless it is confident.</li>
+          <li><strong>It cannot close other apps for you.</strong> Android does not allow it, so you tap Force stop yourself.</li>
+          <li><strong>Android only.</strong> iPhone is not supported.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <p class="eyebrow">Questions</p>
+      <h2 id="faq-h">Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Is SpyShield really free?</summary>
+          <p>Yes. SpyShield is free and open source under the MIT license. There are no ads, no in-app purchases and no account to create.</p>
+        </details>
+        <details>
+          <summary>Does SpyShield send my data anywhere?</summary>
+          <p>No. SpyShield does not even ask for the internet permission, so it cannot send anything off your phone by itself. Your activity history, block list and settings stay in the app's private storage on your device. A privacy report only leaves your phone if you choose to share it.</p>
+        </details>
+        <details>
+          <summary>Can SpyShield tell me exactly which app is using my camera or microphone?</summary>
+          <p>When an app is on screen, yes. For apps working in the background, Android hides the exact app from normal apps, so SpyShield shows its best guess as "Possible: ..." unless it can identify the app with confidence.</p>
+        </details>
+        <details>
+          <summary>Can SpyShield stop a spying app automatically?</summary>
+          <p>Partly. With the optional Auto-block setting, when SpyShield confidently identifies a background app using your camera or mic, it adds that app to your block list and sounds an alarm with a Stop it now button. Android does not let one app close another, so you tap Force stop yourself. From there you can also revoke its camera or microphone access or uninstall it in one tap.</p>
+        </details>
+        <details>
+          <summary>Does it need root?</summary>
+          <p>No. SpyShield works on normal, unrooted phones. Because it does not use root, it cannot silently switch off another app's permissions; instead it takes you straight to the right settings page in one tap.</p>
+        </details>
+        <details>
+          <summary>Which phones does it work on? Is there an iPhone version?</summary>
+          <p>SpyShield works on Android 8.0 and newer. It has been tested on an OPPO Reno8 5G running Android 14. iPhone is not supported.</p>
+        </details>
+        <details>
+          <summary>Why does my phone warn me when I install the APK?</summary>
+          <p>Android shows a warning for any app installed from outside the Play Store. That is normal for downloaded APK files. SpyShield's full source code is public on GitHub, so anyone can check what it does.</p>
+        </details>
+        <details>
+          <summary>Why does SpyShield ask for Usage Access?</summary>
+          <p>Usage Access lets SpyShield see which app was on screen at the moment your camera or microphone switched on. That is how it tells normal use (like a video call you started) apart from hidden use. This information never leaves your phone.</p>
+        </details>
+        <details>
+          <summary>SpyShield stops working after a while. What can I do?</summary>
+          <p>Some phones, especially Xiaomi, OPPO, Vivo and Samsung, close background apps to save battery. Open your phone's settings for SpyShield and set its battery usage to Unrestricted.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="final-h">
+    <div class="wrap">
+      <div class="final">
+        <h2 id="final-h">Know when your camera or mic turns on</h2>
+        <p class="sub" style="margin:0 auto 24px">Free, open source and private. Takes a minute to set up.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest/download/SpyShield.apk" download>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>
+            Download free APK
+          </a>
+          <a class="btn btn-ghost" href="https://github.com/OWNER_PLACEHOLDER/spyshield">View source on GitHub</a>
+        </div>
+        <p class="fine">Android 8.0+ · Free · Open source · No ads · No account</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap row">
+    <p style="margin:0">© 2026 Getwebup · Released under the <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/blob/main/LICENSE">MIT License</a></p>
+    <nav aria-label="Footer">
+      <a href="https://github.com/OWNER_PLACEHOLDER/spyshield">Source code</a>
+      <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/releases/latest">Releases</a>
+      <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/blob/main/docs/PRIVACY_POLICY.md">Privacy policy</a>
+      <a href="https://github.com/OWNER_PLACEHOLDER/spyshield/issues">Report a problem</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
